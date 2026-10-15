@@ -61,10 +61,11 @@ async def bottom_menu_text(update: Update, context: ContextTypes.DEFAULT_TYPE):
     context.user_data.clear()
     if text == "👩‍💼 Менеджер":
         await update.effective_message.reply_text(
-            "👩‍💼 Зв’язатися з менеджером\\n\\n"
-            "📞 Оксана: 066 497 6073\\n"
-            "📸 Наша сторінка Instagram ❣️\\n"
-            "https://www.instagram.com/by_ks_jeans",
+            "👩‍💼 <b>Зв’язатися з менеджером</b>\n\n"
+            "📞 Оксана: <a href=\"tel:+380664976073\">066 497 6073</a>\n"
+            "📸 Наша сторінка Instagram ❣️\n"
+            "<a href=\"https://www.instagram.com/by_ks_jeans\">https://www.instagram.com/by_ks_jeans</a>",
+            parse_mode="HTML",
             reply_markup=persistent_menu(),
             disable_web_page_preview=True,
         )
